@@ -2,19 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta id="wixMobileViewport" name="viewport" content="width=390, user-scalable=no">.
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <title>MUKLABS</title>
     <style>
     body{
         margin:0;
     }
+    nav{
+      margin:0;
+      padding-top:0px;
+    }
     </style>
     <link rel="stylesheet" href="main.css">    
     <script src="pixi.js"></script>  
 </head>
-<body>
-    <canvas id="myCanvas"></canvas>
-    <script src="app.js"></script>     
+<body class="light-blue darken-3">
+    <nav class="grey darken-3 container">
+        <div class="nav-wrapper container">
+          <a href="#!" class="brand-logo" style="font-family: acme ">MUK<span class="green-text">LABS</span></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" style="font-family: acme ">
+            <li><a href="sass.html"><i class="material-icons left green-text">library_books</i>About</a></li>
+            <li><a href="badges.html"><i class="material-icons left green-text">code</i>Projects</a></li>
+            <li><a href="collapsible.html"><i class="material-icons left green-text">people</i>Our Team</a></li>
+            <li><a href="mobile.html"><i class="material-icons left green-text">chat</i>Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav grey lighten-3" id="mobile-demo">
+           
+        <li class="background">
+          <div class="user-view">
+            <img src="m1.png" alt="" height=100% width=100%>
+          </div>
+          <a href="#!" class=" brand-logo center" style="font-family: acme;font-size:50px;">
+          M<span class="green-text">L</span></a>
+        </li>
+        <li><a   href=""> <i class="material-icons left green-text">library_books</i>About</a></li>
+        <li><a   href=""> <i class="material-icons left green-text">code</i>Projects</a></li>
+        <li><a   href=""> <i class="material-icons left green-text">people</i>Our Team</a></li>
+        <li><a   href=""> <i class="material-icons left green-text">chat</i>Contact Us</a></li>
+      </ul>
+     
+    <canvas id="myCanvas">
+       
+    </canvas>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+      </script>  
+    <script src="app.js"></script>  
+       
 </body>
 </html>
