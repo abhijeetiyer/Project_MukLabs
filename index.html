@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta id="wixMobileViewport" name="viewport" content="width=325, height=device-height, user-scalable=no">.
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximmum-scale=1">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+      var updateLayout = function() {
+        if (window.innerWidth != currentWidth) {
+          currentWidth = window.innerWidth;
+          var orient = (currentWidth == 320) ? "profile" : "landscape";
+          document.body.setAttribute("orient", orient);
+          window.scrollTo(0, 1);
+        }
+      };
+      
+      iPhone.DomLoad(updateLayout);
+      setInterval(updateLayout, 400);
+      </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">

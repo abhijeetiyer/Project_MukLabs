@@ -11,7 +11,7 @@ html,body{
 
 }
 .button {
-    top:300px;
+    top:330px;
     left:105px;
   transition: all .15s linear 0s;
   position: relative;
@@ -78,7 +78,7 @@ html,body{
 a.button { position: relative; }
 
 a:active.button {
-  top: 300px;
+  top: 330px;
   left: 105px;
   box-shadow: none;
   
