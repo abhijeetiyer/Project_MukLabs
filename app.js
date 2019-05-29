@@ -2,23 +2,28 @@ const canvas = document.querySelector('#myCanvas');
 const canvas2 = document.querySelector('#myCanvas2');
 w = window.innerWidth;
 h = window.innerHeight;
+
 const app = new PIXI.Application({
 view:canvas,
 width:w,
 height:h,
+autoPreventDefault:false,
+scrollabel:true,
 transparent:true,
 autoDensity:true,
 resolution:devicePixelRatio
 });
+// app.view.style.touchAction = 'auto'; 
+// app.plugins.
 const stage = new PIXI.Container();
-
+app.view.style.touchAction = 'auto'; 
 window.addEventListener('resize', resize);
 function resize()
 {
     w = window.innerWidth;
     h = window.innerHeight;
     //starAmount = 50;
-       
+    app.view.style.touchAction = 'auto'; 
     app.renderer.resize(w,h);
 }
 
@@ -78,10 +83,8 @@ app.ticker.add((delta) => {
         const z = star.z - cameraZ;
         star.sprite.x = star.x * (fov / z) * app.renderer.screen.width + app.renderer.screen.width / 2;
         star.sprite.y = star.y * (fov / z) * app.renderer.screen.width + app.renderer.screen.height / 2;
-        star.sprite.interactive = true;
- star.sprite.buttonMode = true;
         // Calculate star scale & rotation.
-        const dxCenter = star.sprite.x - app.renderer.screen.width / 2;
+        const dxCenter = star.sprite.x - app.renderer.screen.width / 1;
         const dyCenter = star.sprite.y - app.renderer.screen.height / 2;
         const distanceCenter = Math.sqrt(dxCenter * dxCenter + dyCenter + dyCenter);
         const distanceScale = Math.max(0, (2000 - z) / 2000);
@@ -95,10 +98,10 @@ app.ticker.add((delta) => {
 
 
 let graphic = new PIXI.Graphics();
-graphic.x = app.renderer.width / 2;
+graphic.x = app.renderer.width / 27;
 graphic.y = app.renderer.height / 2;
 graphic.lineStyle(2,0xffffff);
-graphic.drawRect(-115,405,250,50);
+graphic.drawRect(0,20,300,300);
 graphic.endFill();
 app.stage.addChild(graphic);
 
@@ -106,34 +109,39 @@ app.ticker.add(animate);
 delta = 0;
 
 
-let graphic2 = new PIXI.Graphics();
-graphic2.x = app.renderer.width / 2;
-graphic2.y = app.renderer.height / 2;
-graphic2.lineStyle(2, 0xffffff);
-graphic2.beginFill(0xffffff);
-graphic2.end
-graphic2.drawRect(-120,400, 250, 50);
+// let graphic2 = new PIXI.Graphics();
+// graphic2.x = app.renderer.width / 2;
+// graphic2.y = app.renderer.height / 2;
+// graphic2.lineStyle(2, 0xffffff);
+// graphic2.beginFill(0xffffff);
+// graphic2.end
+// graphic2.drawRect(-120,400, 250, 50);
 
-app.stage.addChild(graphic2);
+// app.stage.addChild(graphic2);
 
 const main1 = new PIXI.Text('A portal',{
     fontFamily: 'Acme',
-    fontSize: 70,
+    fontSize: 60,
     fill: 'White',
     align: 'left',
 });
 app.stage.addChild(main1);
-main1.position.set(w/2, h/2);
-//graphic2.on('pointerdown', buttonDown);
+main1.x = app.renderer.width/5;
+main1.y = app.renderer.height/5;
 
 const main2 = new PIXI.Text('for learning',{
     fontFamily: 'Acme',
-    fontSize: 70,
+    fontSize: 60,
     fill: 'White',
     align: 'left',
 });
 app.stage.addChild(main2);
-main2.position.set(w/2, h/2);
+main2.x = app.renderer.width/10;
+main2.y = app.renderer.height/6;
+
+// main1.position.set(20,100);
+   
+// main2.position.set(30,200);
 // (function() {
 //     const wf = document.createElement('script');
 //     wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
@@ -146,35 +154,34 @@ main2.position.set(w/2, h/2);
 
 
 
-const text = new PIXI.Text('Scroll Down',{
-    fontFamily: 'Acme',
-    fontSize: 30,
-    fill: 'Black',
-    align: 'left',
-});
-graphic2.addChild(text);
-text.position.set(-100, 400);
+// const text = new PIXI.Text('Scroll Down',{
+//     fontFamily: 'Acme',
+//     fontSize: 30,
+//     fill: 'Black',
+//     align: 'left',
+// });
+// graphic2.addChild(text);
+// text.position.set(-100, 400);
 
 function animate()
 {
     
     delta +=0.1;
 
-    graphic2.x = app.screen.width / 2
-    graphic2.y = app.screen.height / 2;
-    graphic.x = app.screen.width / 2
+    // graphic2.x = app.screen.width / 2
+    // graphic2.y = app.screen.height / 2;
+    graphic.x = app.screen.width /27 ;
     graphic.y = app.screen.height / 2;
 
-    main1.style.width = app.screen.width / 2;
-    main1.style.height = app.screen.height / 2;
+    main1.x = app.screen.width / 10;
+    main1.y = app.screen.height / 20;
    
-   main2.style.width = app.screen.width / 2;
-   main1.position.set(10,100);
-   
-   main2.position.set(10,200);
-   
+   main2.x = app.screen.width / 25;
+   main2.y = app.screen.height / 5;
+
+//    app.view.style.touchAction = 'auto'; 
     
-    graphic2.y = Math.sin(delta) * 10;
+  //  graphic2.y = Math.sin(delta) * 10;
     graphic.y = Math.sin(delta) * 10;
    
 
@@ -184,3 +191,42 @@ function animate()
 }
 
 
+
+//Select all links with hashes
+$('a[href*="#"]')
+// Remove links that dont actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+  
