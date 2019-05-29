@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximmum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maxim">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript">
@@ -64,7 +64,7 @@
       <canvas id="myCanvas">
        
       </canvas>
-      <div class="fixed-action-btn">
+      <div class="fixed-action-btn center-align">
           <a class="btn-floating btn-large white">
             <i class="large material-icons green-text">layers</i>
           </a>
@@ -157,7 +157,10 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems);
+    var instances = M.FloatingActionButton.init(elems,{
+      direction: 'left',
+      hoverEnabled: false
+    });
   });
       </script>  
     <script src="app.js"></script>  
