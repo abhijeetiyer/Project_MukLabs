@@ -10,8 +10,10 @@ html,body{
    overflow-x:hidden;
 
 }
-.img{
-  top:20%;
+img{
+  height:45%;
+  width:45%;
+  padding-top: 15%;
 }
 p{
   font-size:20px;

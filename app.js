@@ -119,7 +119,7 @@ delta = 0;
 
 // app.stage.addChild(graphic2);
 
-const main1 = new PIXI.Text('A portal',{
+const main1 = new PIXI.Text('A portal \n for learning',{
     fontFamily: 'Roboto Condensed',
     fontSize: 60,
     fill: 'White',
@@ -129,15 +129,15 @@ app.stage.addChild(main1);
 main1.x = app.renderer.width/5;
 main1.y = app.renderer.height/5;
 
-const main2 = new PIXI.Text('for learning',{
-    fontFamily: 'Roboto Condensed',
-    fontSize: 60,
-    fill: 'White',
-    align: 'left',
-});
-app.stage.addChild(main2);
-main2.x = app.renderer.width/10;
-main2.y = app.renderer.height/6;
+// const main2 = new PIXI.Text('for learning',{
+//     fontFamily: 'Roboto Condensed',
+//     fontSize: 60,
+//     fill: 'White',
+//     align: 'left',
+// });
+// app.stage.addChild(main2);
+// main2.x = app.renderer.width/10;
+// main2.y = app.renderer.height/6;
 
 // main1.position.set(20,100);
    
@@ -171,13 +171,13 @@ function animate()
     // graphic2.x = app.screen.width / 2
     // graphic2.y = app.screen.height / 2;
     graphic.x = app.screen.width /27 ;
-    graphic.y = app.screen.height / -10;
+    graphic.y = app.screen.height / 10;
 
-    main1.x = app.screen.width / 10;
+    main1.x = app.screen.width / 15;
     main1.y = app.screen.height / 10;
    
-   main2.x = app.screen.width / 15;
-   main2.y = app.screen.height / 4.7;
+  //  main2.x = app.screen.width / 10;
+  //  main2.y = app.screen.height / 3.9;
 
 //    app.view.style.touchAction = 'auto'; 
     
