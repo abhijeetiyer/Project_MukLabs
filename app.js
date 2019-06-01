@@ -101,7 +101,7 @@ let graphic = new PIXI.Graphics();
 graphic.x = app.renderer.width / 27;
 graphic.y = app.renderer.height / 2;
 graphic.lineStyle(2,0xffffff);
-graphic.drawRect(0,20,300,350);
+graphic.drawRect(0,20,340,400);
 graphic.endFill();
 app.stage.addChild(graphic);
 
@@ -120,7 +120,7 @@ delta = 0;
 // app.stage.addChild(graphic2);
 
 const main1 = new PIXI.Text('A portal',{
-    fontFamily: 'Acme',
+    fontFamily: 'Roboto Condensed',
     fontSize: 60,
     fill: 'White',
     align: 'left',
@@ -130,7 +130,7 @@ main1.x = app.renderer.width/5;
 main1.y = app.renderer.height/5;
 
 const main2 = new PIXI.Text('for learning',{
-    fontFamily: 'Acme',
+    fontFamily: 'Roboto Condensed',
     fontSize: 60,
     fill: 'White',
     align: 'left',
@@ -142,15 +142,15 @@ main2.y = app.renderer.height/6;
 // main1.position.set(20,100);
    
 // main2.position.set(30,200);
-// (function() {
-//     const wf = document.createElement('script');
-//     wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
-//     }:https://fonts.googleapis.com/css?family=Acme&display=swap`;
-//     wf.type = 'text/javascript';
-//     wf.async = 'true';
-//     const s = document.getElementsByTagName('script')[0];
-//     s.parentNode.insertBefore(wf, s);
-// }());
+(function() {
+    const wf = document.createElement('script');
+    wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
+    }:https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap`;
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+}());
 
 
 
@@ -171,13 +171,13 @@ function animate()
     // graphic2.x = app.screen.width / 2
     // graphic2.y = app.screen.height / 2;
     graphic.x = app.screen.width /27 ;
-    graphic.y = app.screen.height / 2;
+    graphic.y = app.screen.height / -10;
 
     main1.x = app.screen.width / 10;
-    main1.y = app.screen.height / 20;
+    main1.y = app.screen.height / 10;
    
-   main2.x = app.screen.width / 25;
-   main2.y = app.screen.height / 5;
+   main2.x = app.screen.width / 15;
+   main2.y = app.screen.height / 4.7;
 
 //    app.view.style.touchAction = 'auto'; 
     
@@ -189,6 +189,7 @@ function animate()
     app.render(stage);
 
 }
+
 
 
 

@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <meta name="viewport" content="width=device-width-1, initial-scale=0.9">
   
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maxim">
-
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
     <script type="text/javascript">
       var updateLayout = function() {
         if (window.innerWidth != currentWidth) {
           currentWidth = window.innerWidth;
-          var orient = (currentWidth == 320) ? "profile" : "landscape";
+          var orient = (currentWidth == 350) ? "profile" : "landscape";
           document.body.setAttribute("orient", orient);
           window.scrollTo(0, 1);
         }
@@ -20,20 +21,22 @@
       iPhone.DomLoad(updateLayout);
       setInterval(updateLayout, 400);
       </script>
+      
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
     <title>MUKLABS</title>
     <link rel="stylesheet" href="main.css">    
     <script src="pixi.js"></script>  
 </head>
-<body class="light-blue darken-3">
+<body class="light-blue darken-3" style="">
     <header>
-        <nav class="grey darken-3 container" id="home">
+        <nav class="grey darken-3" id="home">
             <div class="nav-wrapper container">
-                <a href="#!" class="brand-logo" style="font-family: acme ">MUK<span class="green-text">LABS</span></a>
+                <a href="#!" class="brand-logo">MUK<span class="green-text">LABS</span></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down" style="font-family: acme ">
+              <ul class="right hide-on-med-and-down">
                 <li><a href="#about"><i class="material-icons left green-text">library_books</i>About</a></li>
                 <li><a href="badges.html"><i class="material-icons left green-text">code</i>Projects</a></li>
                 <li><a href="collapsible.html"><i class="material-icons left green-text">people</i>Our Team</a></li>
@@ -48,8 +51,9 @@
               <div class="user-view">
                 <img src="m1.png" alt="" height=100% width=100%>
               </div>
-              <a href="#!" class=" brand-logo center" style="font-family: acme;font-size:50px;">
+              <a href="#!" class=" brand-logo center" style="font-size:50px;">
               M<span class="green-text">L</span></a>
+              <div class="divider"></div>
             </li>
             <li><a   href="#about"> <i class="material-icons left green-text">library_books</i>About</a></li>
             <li><a   href=""> <i class="material-icons left green-text">code</i>Projects</a></li>
@@ -60,13 +64,13 @@
     </header>  <!-- <a href="#about" style="font-family: acme;font-size:20px;" class="btn waves-effect waves-light btn-large white green-text" type="submit" name="action">Get Started
         <i class="material-icons right">send</i>
       </a>   -->
-      <a href="#about" class="button" style="font-family: acme;font-size:20px;">Get Started</a>
+      <a href="#about" class="button"> <b>GET STARTED</b></a>
       <canvas id="myCanvas">
        
       </canvas>
       <div class="fixed-action-btn center-align">
           <a class="btn-floating btn-large white">
-            <i class="large material-icons green-text">layers</i>
+            <i class="large material-icons green-text">map</i>
           </a>
           <ul>
               <li><a href="#home" class="btn-floating teal"><i class="material-icons white-text">home</i></a></li>
@@ -75,41 +79,72 @@
             <li><a href="#contact" class="btn-floating  blue-grey lighten-2"><i class="material-icons">message</i></a></li>
           </ul>
         </div>
-<section class="card grey lighten-4"  style="font-family: acme;">
+<section class="card grey lighten-4">
   <br><br>
- <h2 class="center-align" id="about">About Us</h2> 
+ <h4 class="center-align" id="about">About us </h4> 
+ <div class="row">
+   <section class="col s12 m6 l6 container">
+      
+     <h4 class="center-align">Heading</h4>
+    <p class="container left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+   </section>
+   <section class="col s12 m6 l6 center-align " >
+     <img src="about.png" alt="" width="20%" height="20%">
+     <div class="container divider"></div>
+   </section>
+  </div>
+  <div class="row">
+        <section class="col s12 m6 l6 center-align" >
+          <img src="project.png" alt="" width="20%" height="20%">
+        </section>
+        <section class="col s12 m6 l6 container">
+           <h4 class="center-align">Heading</h4>
+           <p class="container left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+               <div class="container divider"></div> 
+              </section>
+       </div>
+       <div class="row">
+          <section class="col s12 m6 l6 container">
+             
+            <h4 class="center-align">Heading</h4>
+           <p class="container left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>   
+          </section>
+          
+          <section class="col s12 m6 l6 center-align " >
+            <img src="team.png" alt="" width="20%" height="20%">
+          </section>
+         </div>
   <div class="container divider"></div>
-  <h3 class="center-align">Features</h3>
-  <div class="center-align row container" >
-    <div class="col s12 m12 l3">
-     <i class="material-icons large green-text">dashboard</i>   
-      <h3>Heading</h3>
-      <p class="center-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
-    <div class="col s12 m12 l3">
-        <i class="material-icons large green-text">dashboard</i>   
-      <h3>Heading</h3>
-      <p class="center-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+  <h4 class="center-align">Features</h4>
+  <div class="center-align row container">
+    
+    <div class="col s12 m4 l4 ">
+        <i class="fa fa-suitcase medium green-text"></i>   
+      <h5>Heading</h5>
+      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
       </div>
-      <div class="col s12 m12 l3">
-          <i class="material-icons large green-text">dashboard</i>   
-      <h3>Heading</h3>
-      <p class="center-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="col s12 m4 l4">
+          <i class="material-icons medium green-text">dashboard</i>   
+      <h5>Heading</h5>
+      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
-        <div class="col s12 m12 l3">
-            <i class="material-icons large green-text">dashboard</i>   
-      <h3>Heading</h3>
-      <p class="center-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>     
+        <div class="col s12 m4 l4">
+            <i class="material-icons medium green-text">settings</i>   
+      <h5>Heading</h5>
+      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>     
     </div>
           
   </div>
 </section>
-<footer class="page-footer grey darken-4" style="font-family: acme;" >
+<footer class="page-footer grey darken-4">
     
      <div id="contact" class="container row">
       
        <form action="" class="col s12 l6 m6">
-          <h4 style="font-family: acme;">Contact Us</h4>
+          <h4>Contact us</h4>
           <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
               <input id="icon_prefix" type="text" class="validate white-text">
@@ -124,21 +159,21 @@
             <br><br>
             <div class="divider"></div>
        </form>
-       <div class=" row col s12 m6 l6 " style="font-family: acme;"> 
+       <div class=" row col s12 m6 l6 "> 
         
         <div class="col s6 m6 l6">
-          <h4 style="font-family: acme;">Follow us on</h4>
-          <div class="row">
-            <a class="col s4"><i class="material-icons green-text">library_books</i></a>
-            <a class="col s4"><i class="material-icons green-text">library_books</i></a>
-            <a class="col s4"><i class="material-icons green-text">library_books</i></a>
+         <br><br><br>
+          <div class="center-align row">
+            <a class="col s4 white-text"><i class="fa fa-facebook-square small"></i></a>
+            <a class="col s4 white-text"><i class="fa fa-linkedin-square small"></i></a>
+            <a class="col s4 white-text"><i class="fa fa-github small"></i></i></a>
           </div> 
         </div>
        </div>
      </div>
      <div class="row">
        <div class="col s6 m12 l12  offset-m6 offset-l6">
-         <a href="#home" class="white-text" style="font-family: acme; font-size:40px">MUK<span class="green-text">LABS</span></a> 
+         <a href="#home" class="white-text" style="font-size:40px">MUK<span class="green-text">LABS</span></a> 
        </div>
      </div>
     </div>
@@ -162,7 +197,8 @@
     });
   });
       </script>  
-    <script src="app.js"></script>  
+    <script src="app.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js" /> 
        
 </body>
 </html>
