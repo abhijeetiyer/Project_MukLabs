@@ -28,7 +28,6 @@ function resize()
 }
 
 const starTexture = PIXI.Texture.from('hex4.png');
-const btn = document.querySelector('.btn');
 const starAmount = 1000;
 let cameraZ = 2;
 const fov = 20;
@@ -108,17 +107,6 @@ app.stage.addChild(graphic);
 app.ticker.add(animate);
 delta = 0;
 
-
-// let graphic2 = new PIXI.Graphics();
-// graphic2.x = app.renderer.width / 2;
-// graphic2.y = app.renderer.height / 2;
-// graphic2.lineStyle(2, 0xffffff);
-// graphic2.beginFill(0xffffff);
-// graphic2.end
-// graphic2.drawRect(-120,400, 250, 50);
-
-// app.stage.addChild(graphic2);
-
 const main1 = new PIXI.Text('A portal \n for learning',{
     fontFamily: 'Roboto Condensed',
     fontSize: 60,
@@ -129,19 +117,6 @@ app.stage.addChild(main1);
 main1.x = app.renderer.width/5;
 main1.y = app.renderer.height/5;
 
-// const main2 = new PIXI.Text('for learning',{
-//     fontFamily: 'Roboto Condensed',
-//     fontSize: 60,
-//     fill: 'White',
-//     align: 'left',
-// });
-// app.stage.addChild(main2);
-// main2.x = app.renderer.width/10;
-// main2.y = app.renderer.height/6;
-
-// main1.position.set(20,100);
-   
-// main2.position.set(30,200);
 (function() {
     const wf = document.createElement('script');
     wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
@@ -153,44 +128,21 @@ main1.y = app.renderer.height/5;
 }());
 
 
-
-// const text = new PIXI.Text('Scroll Down',{
-//     fontFamily: 'Acme',
-//     fontSize: 30,
-//     fill: 'Black',
-//     align: 'left',
-// });
-// graphic2.addChild(text);
-// text.position.set(-100, 400);
-
 function animate()
 {
     
-    delta +=0.1;
 
-    // graphic2.x = app.screen.width / 2
-    // graphic2.y = app.screen.height / 2;
     graphic.x = app.screen.width /27 ;
     graphic.y = app.screen.height / 10;
 
     main1.x = app.screen.width / 15;
     main1.y = app.screen.height / 10;
-   
-  //  main2.x = app.screen.width / 10;
-  //  main2.y = app.screen.height / 3.9;
 
-//    app.view.style.touchAction = 'auto'; 
-    
-  //  graphic2.y = Math.sin(delta) * 10;
     graphic.y = Math.sin(delta) * 10;
-   
-
-    
+  
     app.render(stage);
 
 }
-
-
 
 
 //Select all links with hashes

@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width-1, initial-scale=0.9">
-  
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    <script type="text/javascript">
-      var updateLayout = function() {
-        if (window.innerWidth != currentWidth) {
-          currentWidth = window.innerWidth;
-          var orient = (currentWidth == 350) ? "profile" : "landscape";
-          document.body.setAttribute("orient", orient);
-          window.scrollTo(0, 1);
-        }
-      };
-      
-      iPhone.DomLoad(updateLayout);
-      setInterval(updateLayout, 400);
-      </script>
+    <style>
+     .icon
+     {
+     padding-top: 15%;
+     }
+     p{
+     font-size:20px;
+     }
+    </style>
       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
     <title>MUKLABS</title>
     <link rel="stylesheet" href="main.css">    
     <script src="pixi.js"></script>  
 </head>
-<body class="light-blue darken-3" style="">
+<body class="light-blue darken-3">
     <header>
         <nav class="grey darken-3" id="home">
             <div class="nav-wrapper container">
@@ -60,16 +51,13 @@
             <li><a   href=""> <i class="material-icons left green-text">people</i>Our Team</a></li>
             <li><a   href="#contact"> <i class="material-icons left green-text">chat</i>Contact Us</a></li>
           </ul>
-        
-    </header>  <!-- <a href="#about" style="font-family: acme;font-size:20px;" class="btn waves-effect waves-light btn-large white green-text" type="submit" name="action">Get Started
-        <i class="material-icons right">send</i>
-      </a>   -->
+    </header>
       <a href="#about" class="button"> <b>GET STARTED</b></a>
       <canvas id="myCanvas">
        
       </canvas>
       <div class="fixed-action-btn ">
-          <a class="btn-floating btn-medium">
+          <a class="btn-floating btn-large">
             <i class="material-icons">map</i>
           </a>
           <ul>
@@ -80,7 +68,7 @@
           </ul>
         </div>
 <section class="card grey lighten-4">
- <h4 class="center-align card-content" id="about">ABOUT US  </h4> 
+ <h4 class="center-align card-content" id="about">ABOUT US </h4> 
 <div class="card-content row">
     <h5 class="container">HEADING</h5>
     <p class="col s12 m6 l6">
@@ -120,8 +108,7 @@
           
   </div>
 </section>
-<footer class="page-footer grey darken-4 ">
-      
+<footer class="page-footer grey darken-4 " id="contact">
        <form action="" class="container  col s12 l6 m6">
           <h4>Contact us</h4>
           <div class="input-field col s12">
@@ -148,7 +135,7 @@
   </footer>
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -164,8 +151,44 @@
     });
   });
       </script>  
-    <script src="app.js"></script> 
-     
+    <script src="app.js" async></script> 
+    <script async>
+    //Select all links with hashes
+$('a[href*="#"]')
+// Remove links that dont actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });</script>
        
 </body>
 </html>
