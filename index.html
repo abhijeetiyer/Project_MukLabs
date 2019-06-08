@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width-1, initial-scale=0.9">
+   <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
      .icon
@@ -22,16 +22,15 @@
     <script src="pixi.js"></script>  
 </head>
 <body class="light-blue darken-3">
-    <header>
-        <nav class="grey darken-3" id="home">
+    <header class="">
+        <nav class="grey darken-3 " id="home">
             <div class="nav-wrapper container">
                 <a href="#!" class="brand-logo">MUK<span class="green-text">LABS</span></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="#about"><i class="material-icons left green-text">library_books</i>About</a></li>
-                <li><a href="badges.html"><i class="material-icons left green-text">code</i>Projects</a></li>
-                <li><a href="collapsible.html"><i class="material-icons left green-text">people</i>Our Team</a></li>
-                <li><a href="#contact"><i class="material-icons left green-text">chat</i>Contact Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Project">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
           </nav>
@@ -39,17 +38,12 @@
           <ul class="sidenav grey lighten-3" id="mobile-demo">
                
             <li class="background">
-              <div class="user-view">
-                <img src="m1.png" alt="" height=100% width=100%>
-              </div>
-              <a href="#!" class=" brand-logo center" style="font-size:50px;">
+              <a href="#!" class=" user-view center" style="font-size:50px;">
               M<span class="green-text">L</span></a>
-              <div class="divider"></div>
             </li>
-            <li><a   href="#about"> <i class="material-icons left green-text">library_books</i>About</a></li>
-            <li><a   href=""> <i class="material-icons left green-text">code</i>Projects</a></li>
-            <li><a   href=""> <i class="material-icons left green-text">people</i>Our Team</a></li>
-            <li><a   href="#contact"> <i class="material-icons left green-text">chat</i>Contact Us</a></li>
+            <li><a  href="#about">About</a></li>
+            <li><a  href="#Project">Projects</a></li>
+            <li><a  href="#contact">Contact Us</a></li>
           </ul>
     </header>
       <a href="#about" class="button"> <b>GET STARTED</b></a>
@@ -61,73 +55,96 @@
             <i class="material-icons">map</i>
           </a>
           <ul>
-              <li><a href="#home" class="btn-floating teal"><i class="material-icons white-text">home</i></a></li>
+            <li><a href="#home" class="btn-floating teal"><i class="material-icons white-text">home</i></a></li>
             <li><a href="#about" class="btn-floating grey lighten-2"><i class="material-icons green-text">library_books</i></a></li>
-            <li><a href="#project" class="btn-floating brown darken-1"><i class="material-icons">code</i></a></li>
-            <li><a href="#contact" class="btn-floating  blue-grey lighten-2"><i class="material-icons">message</i></a></li>
+            <li><a href="#Project" class="btn-floating brown darken-1"><i class="material-icons">code</i></a></li>
           </ul>
         </div>
-<section class="card grey lighten-4">
- <h4 class="center-align card-content" id="about">ABOUT US </h4> 
-<div class="card-content row">
-    <h5 class="container">HEADING</h5>
-    <p class="col s12 m6 l6">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <i class="col s12 m6 l6 center icon fa fa-wpexplorer large"></i>
-</div>
-<div class="row">
-    <i class="col s12 m6 l6 center icon fa fa-connectdevelop large"></i>
-    <h5 class="center-align">HEADING</h5>
-    <p class="col s12 m6 l6">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
     
-</div>
-
-      
-<hr>
-  <h4 class="center-align">Features</h4>
-  <div class="center-align row ">
-    
-    <div class="col s12 m4 l4 ">
-        <i class="fa fa-suitcase medium "></i>   
-      <h5>Heading</h5>
-      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      </div>
-      <div class="col s12 m4 l4">
-          <i class="material-icons medium">dashboard</i>   
-      <h5>Heading</h5>
-      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        </div>
-        <div class="col s12 m4 l4">
-            <i class="material-icons medium">settings</i>   
-      <h5>Heading</h5>
-      <p class="left-align">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>     
-    </div>
+        <section id="about" class="container white-text">
+        <h4 class="center-align">About Us</h4>
+         <div class="row">
+          <div class="col s12 m6 l6 card-shadow paded">
+            <h5>heading</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col s12 m6 l6 center-align paded">
+            <i class="fa fa-connectdevelop pading large"></i>
+          </div>
+         </div>
+        </section>
+        <section class="center-align white-text container">
+          <h5 class="center-align">Our Ideas</h5>
+          <div class="row">
+            <div class="col s12 m4 l4 card-shadow center-align">
+            <i class="brand-logo material-icons large">dashboard</i>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col s12 m4 l4 card-shadow  center-align">
+              <i class="brand-logo material-icons large">apps</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="col s12 m4 l4 card-shadow  center-align">
+                <i class="brand-logo material-icons large">developer_board</i>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+          </div> 
           
-  </div>
-</section>
+        </section>
+        <section id="Project" class="container row">
+            <h5 class="center-align white-text">Projects</h5>
+            <ul class="col s12 m4 l4 center-align collapsible popout">
+                <li class="font">
+                  <div class="collapsible-header"><i class="material-icons">filter_1</i>IOT (Internet Of Things)</div>
+                  <div class="collapsible-body white-text"> <p>  Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                    <a class="btn btn-medium">Know More</a></div>
+                </li>
+              </ul>
+              <ul class="col s12 m4 l4 collapsible popout">
+                  <li class="font">
+                    <div class="collapsible-header"><i class="material-icons">filter_2</i>Machine Learning</div>
+                    <div class="collapsible-body white-text"> <p>  Lorem ipsum dolor sit amet.</p>
+                      <a class="btn btn-medium">Know More</a></div>
+                  </li>
+                </ul>
+                <ul class="col s12 m4 l4 collapsible popout">
+                    <li class="font">
+                      <div class="collapsible-header"><i class="material-icons ">filter_3</i>Image Processing</div>
+                      <div class="collapsible-body white-text"> <p>  Lorem ipsum dolor sit amet.</p>
+                        <a class="btn btn-medium">Know More</a>
+                      </div>
+                    </li>
+                  </ul>
+                <ul class="col s12 m4 l4 collapsible popout">
+                    <li class="font">
+                      <div class="collapsible-header"><i class="material-icons ">filter_4</i>App</div>
+                      <div class="collapsible-body white-text"> <p>  Lorem ipsum dolor sit amet.</p>
+                        <a class="btn btn-medium">Know More</a></div>
+                    </li>
+                  </ul>
+                  <ul class="col s12 m4 l4 collapsible popout">
+                      <li class="font">
+                        <div class="collapsible-header"><i class="material-icons ">filter_5</i>Web</div>
+                        <div class="collapsible-body white-text"> <p>  Lorem ipsum dolor sit amet.</p>
+                          <a class="btn btn-medium">Know More</a></div>
+                      </li>
+                    </ul>
+            </section>
+
 <footer class="page-footer grey darken-4 " id="contact">
-       <form action="" class="container  col s12 l6 m6">
-          <h4>Contact us</h4>
-          <div class="input-field col s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate white-text">
-              <label for="icon_prefix">Email Address</label>
-            </div>
-          <div class="input-field col s12">
-              <i class="material-icons prefix">mode_edit</i>
-              <textarea id="icon_prefix2" class="materialize-textarea white-text"></textarea>
-              <label for="icon_prefix2">Message</label>
-            </div>
-            <a class="row col waves-effect waves-light btn-large blue darken-4"><i class="material-icons left">thumb_up</i> submit</a>
-            <div class="col">
-                <a href="#fb" class="col s4 m4 l4 white-text"><i class="fa fa-facebook-square small"></i></a>
-                <a href="#li" class="col s4 m4 l4 white-text"><i class="fa fa-linkedin-square small"></i></a>
-                <a href="#git" class="col s4 m4 l4 white-text"><i class="fa fa-github small"></i></i></a> 
-            </div>
-       </form>
+  <form action="" class="container">
+      <div class="row">
+          <div class="input-field col s6">
+            <input id="input_text" type="text" data-length="10">
+            <label for="input_text">Email_id</label>
+            <div class="input-field">
+                <textarea id="textarea2" class=" materialize-textarea" data-length="120"></textarea>
+                <label for="textarea2">Message</label>
+              </div>
+              <a class="btn btn-medium"><i class="material-icons left">thumb_up</i> submit</a>
+          </div>
+        </div>
+  </form>
      
     <div class="center-align"><a href="#home" class="white-text" style="font-size:40px;">MUK<span class="green-text">LABS</span></a></div>
      
@@ -135,7 +152,7 @@
   </footer>
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -144,51 +161,21 @@
   });
 
   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems,{
+    var instances = M.FloatingActionButton.init(elems, {
       direction: 'left',
       hoverEnabled: false
     });
   });
+  
       </script>  
-    <script src="app.js" async></script> 
-    <script async>
-    //Select all links with hashes
-$('a[href*="#"]')
-// Remove links that dont actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });</script>
+    <script src="app.js"></script> 
+ 
        
 </body>
 </html>
