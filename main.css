@@ -8,8 +8,8 @@ html,body{
     margin:0;
     /* background-attachment: fixed; */
      /* this is the exact culprit */ 
-    overflow-x:hidden;
-    overscroll-behavior: none;
+    /* overflow-x:hidden;
+    overscroll-behavior: none; */
 
  
 }

@@ -114,15 +114,15 @@ app.stage.addChild(main1);
 main1.x = app.renderer.width/5;
 main1.y = app.renderer.height/5;
 
-// (function() {
-//     const wf = document.createElement('script');
-//     wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
-//     }:https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap`;
-//     wf.type = 'text/javascript';
-//     wf.async = 'true';
-//     const s = document.getElementsByTagName('script')[0];
-//     s.parentNode.insertBefore(wf, s);
-// }());
+(function() {
+    const wf = document.createElement('script');
+    wf.src = `${document.location.protocol === 'https:' ? 'https' : 'http'
+    }:https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap`;
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+}());
 
 
 function animate()

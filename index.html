@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
     <title>MUKLABS</title>
     <link rel="stylesheet" href="main.css">    
     <script src="pixi.js"></script>  
@@ -46,7 +48,7 @@
             <li><a  href="#contact">Contact Us</a></li>
           </ul>
     </header>
-      <a href="#about" class="button"> <b>GET STARTED</b></a>
+      <a href="#about" class="button" data-aos="fade-down"  data-aos-duration="1000" data-aos-delay="500"> <b>GET STARTED</b></a>
       <canvas id="myCanvas">
        
       </canvas>
@@ -62,36 +64,36 @@
         </div>
     
         <section id="about" class="container white-text">
-        <h4 class="center-align">About Us</h4>
-         <div class="row">
-          <div class="col s12 m6 l6 card-shadow paded">
+        <h4  class="center-align">About Us</h4>
+         <div class="row" >
+          <div  class="col s12 m6 l6 card-shadow paded">
             <h5>heading</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
           <div class="col s12 m6 l6 center-align paded">
-            <i class="fa fa-connectdevelop pading large"></i>
+            <i class="fa fa-connectdevelop pading large" ></i>
           </div>
          </div>
         </section>
-        <section class="center-align white-text container">
+        <section class="center-align white-text container" >
           <h5 class="center-align">Our Ideas</h5>
           <div class="row">
             <div class="col s12 m4 l4 card-shadow center-align">
             <i class="brand-logo material-icons large">dashboard</i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p data-aos="flip-down" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="col s12 m4 l4 card-shadow  center-align">
               <i class="brand-logo material-icons large">apps</i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="250">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
               <div class="col s12 m4 l4 card-shadow  center-align">
                 <i class="brand-logo material-icons large">developer_board</i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
           </div> 
           
         </section>
-        <section id="Project" class="container row">
+        <section  id="Project" class="container row">
             <h5 class="center-align white-text">Projects</h5>
             <ul class="col s12 m4 l4 center-align collapsible popout">
                 <li class="font">
@@ -132,7 +134,7 @@
             </section>
 
 <footer class="page-footer grey darken-3" id="contact">
-  <form action="" class="container">
+  <form  action="" class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
       <div class="row">
           <div class="input-field col s6">
             <input id="input_text" type="text" data-length="10">
@@ -173,9 +175,16 @@
     });
   });
   
-      </script>  
+      </script> 
+      
     <script src="app.js"></script> 
  
-       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+      $(function() {
+  AOS.init();
+});
+    </script>
+  
 </body>
 </html>
