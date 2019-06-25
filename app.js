@@ -97,7 +97,7 @@ let graphic = new PIXI.Graphics();
 graphic.x = app.renderer.width / 27;
 graphic.y = app.renderer.height / 2;
 graphic.lineStyle(2,0xffffff);
-graphic.drawRect(0,20,340,337);
+graphic.drawRect(0,20,340,300);
 graphic.endFill();
 app.stage.addChild(graphic);
 
