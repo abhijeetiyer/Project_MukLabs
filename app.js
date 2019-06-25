@@ -97,7 +97,7 @@ let graphic = new PIXI.Graphics();
 graphic.x = app.renderer.width / 27;
 graphic.y = app.renderer.height / 2;
 graphic.lineStyle(2,0xffffff);
-graphic.drawRect(0,20,340,400);
+graphic.drawRect(0,20,340,337);
 graphic.endFill();
 app.stage.addChild(graphic);
 
@@ -130,7 +130,7 @@ function animate()
     
 
     graphic.x = app.screen.width /27 ;
-    graphic.y = app.screen.height / 10;
+    graphic.y = app.screen.height / 15;
 
     main1.x = app.screen.width / 15;
     main1.y = app.screen.height / 10;
