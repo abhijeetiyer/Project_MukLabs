@@ -31,8 +31,8 @@ const fov = 20;
 const baseSpeed = 0.025;
 let speed = 0;
 let warpSpeed = 1;
-const starStretch = 0;
-const starBaseSize = 0.05;
+const starStretch = 0
+const starBaseSize = 0.04;
 
 
 // Create the stars

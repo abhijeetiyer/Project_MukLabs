@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=0.9">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=320, initial-scale=1, user-scalable=yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=790">
     <style>
      .icon
      {
@@ -13,6 +17,51 @@
      font-size:20px;
      }
     </style>
+   <script>  
+   var metas = document.getElementsByTagName('meta');
+var i;
+if (navigator.userAgent.match(/iPhone/i)) {
+	for (i=0; i<metas.length; i++) {
+		if (metas[i].name == "viewport") {
+			metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+		}
+	}
+	document.getElementsByTagName('body')[0].addEventListener("gesturestart", gestureStart, false);
+}
+function gestureStart() {
+	for (i=0; i<metas.length; i++) {
+		if (metas[i].name == "viewport") {
+			metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+		}
+	}
+}
+
+
+// Rewritten version
+// By @mathias, @cheeaun and @jdalton
+
+(function(doc) {
+
+var addEvent = 'addEventListener',
+		type = 'gesturestart',
+		qsa = 'querySelectorAll',
+		scales = [1, 1],
+		meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+function fix() {
+	meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+	doc.removeEventListener(type, fix, true);
+}
+
+if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+	fix();
+	scales = [.25, 1.6];
+	doc[addEvent](type, fix, true);
+}
+
+}(document));
+</script>
+
       
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
